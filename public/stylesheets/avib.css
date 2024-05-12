@@ -1,0 +1,300 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+header{
+    background-color: #405e80;
+    padding: 16px 0;
+}
+
+header h1{
+    color: lightgrey;
+    font-size: 40px;
+    font-weight: 100;
+    font-style: italic;
+    display: inline-block;
+    position: relative;
+    /* bottom: 10px; */
+    margin-left: 50px;  
+}
+
+h2{
+    color: #405e80;
+    font-weight: 400;
+}
+
+nav{
+    background-color: #405e80;
+    margin-bottom: 20px;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li{
+    flex-grow: 1;
+}
+
+nav ul li a{
+    color: lightgrey;
+    text-decoration: none;
+    padding: 3px 6px;
+    display: block;
+    text-align: center;
+}
+
+nav ul li a:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+footer{
+    background-color: #405e80;
+    clear: both;
+    color: lightgrey;
+    text-align: center;
+    padding: 5px 0;
+    margin-top: 20px;
+}
+
+.activo{
+    background-color:#8794a3;
+}
+
+.holder{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.imgLogo{
+    width: 40px;
+    border-radius: 100%;
+}
+
+.bienvenidos{
+    width: 75%;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.testimonios{
+    width: 25%;
+}
+
+.columnas{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bienvenidos p{
+    font-size: 20px;
+    color: #1e4d83;
+}
+
+.testimonio{
+    background-color: #405e80;
+    padding: 16px;
+    color: lightgray;
+}
+
+.testimonio .cita{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px;
+    display: block;
+}
+
+.testimonio .autor{
+    font-size: 10px;
+    text-align: center;
+    display: block;
+    margin: 12px 0;
+}
+
+.historia p{
+    font-size: 12px;
+}
+
+.personas{
+    display: flex;
+    justify-content: space-between;
+}
+
+.persona{
+    border: 1px solid #0e4788;
+    border-radius: 5px;
+    width: 18%;
+    text-align: center;
+    padding: 13px;
+    box-sizing: border-box;
+}
+
+.persona img{
+    border-radius: 50%;
+    max-width: 60%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.persona h5, .persona h6{
+    margin: 0;
+    font-weight: normal;
+    color: #2e64a1;
+}
+
+.persona h5{
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.persona h6{
+    font-size: 11px;
+    font-style: italic;
+}
+
+.persona p{
+    color: #0e4788;
+    font-size: 10px;
+}
+
+.servicio{
+    border: 1px solid #0e4788;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 16px 0;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.servicio .info h4{
+    color: #2e64a1;
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 1px solid #2e64a1;
+    padding-bottom: 10px;
+}
+
+.servicio .info p{
+    font-size: 13px;
+}
+
+.servicio img{
+    border-radius: 13px;
+    display: block;
+    max-width: 125px;
+}
+
+.servicio:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.galeria img{
+    width: 18%;
+    border: 1px solid #0e4788;
+    padding: 0.3em;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    margin-right: 2%;
+}
+
+.novedades{
+    border-bottom: 1px solid #2e64a1;
+}
+
+.contacto {
+    display: flex;
+    gap: 24px;
+}
+
+.contacto div {
+    width: 100%;
+}
+
+.datos p{
+    font-size: 14px;
+}
+
+.datos ul li{
+    font-size: 13px;
+}
+
+.formulario p{
+    display: flex;
+}
+
+.formulario p label{
+    min-width: 80px;
+}
+
+.formulario p label{
+    display: flex;
+    align-items: center;
+}
+
+.formulario p:nth-child(4){
+    align-items: start;
+}
+
+.formulario textarea{
+    resize: none;
+    height: 150px;
+}
+
+.formulario input[type="submit"]{
+    background-color: #405e80;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    color: lightgrey;
+    font-size: 16px;
+    padding: 6px 20px;
+    width: auto;
+    position: relative;
+    left: 5rem;
+    cursor: pointer;
+}
+
+.formulario input[type="submit"]:hover{
+    background-color: #2e64a1;
+}
+
+.avibButton {
+	/* box-shadow:inset 0px 1px 0px 0px #dcecfb; */
+	background:linear-gradient(to bottom, #81bcf8 5%, #4ca1f7 100%);
+	background-color:#4ca1f7;
+	border-radius:6px;
+	border:none;
+	display:inline-block;
+	color:white;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:600;
+    font-style: italic;
+	padding:6px 24px;
+	text-decoration:none;
+}
+.avibButton:hover {
+	background:linear-gradient(to bottom, #4ca1f7 5%, #81bcf8 100%);
+	background-color:#2e64a1;
+}
+.avibButton:active {
+	position:relative;
+	top:1px;
+}
+
+/* con esta clase centramos el formulario al medio del area del contenedor */
+.frmLogin{
+    width: 450px;
+    background-color: #405e80;
+    padding: 4rem 1rem;
+    border-radius: 10px;
+}

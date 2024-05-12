@@ -1,0 +1,50 @@
+{{!-- Renderizamos el formulario que nos permite agregar un producto en la base de datos --}}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center">Actualizar Producto</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <form action="/productos/editar" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="id" value="{{product.id}}">
+                <div class="form-group my-4">
+                    <label for="NombreProducto">Nombre Producto</label>
+                    <input type="text" class="form-control" id="NombreProducto" name="NombreProducto" value="{{product.NombreProducto}}" required>
+                </div>
+                <div class="form-group my-4">
+                    <label for="Medidas">Medidas</label>
+                    <input type="text" class="form-control" id="Medidas" name="Medidas" value="{{product.Medidas}}" required>
+                </div>
+                <div class="form-group my-4">
+                    <label for="Descripcion">Descripción</label>
+                    <input type="text" class="form-control" id="Descripcion" name="Descripcion" value="{{product.Descripcion}}" required>
+                </div>
+                <div class="form-group my-4">
+                    <label for="OtrasEspecificaciones">Otras Especificaciones</label>
+                    <input type="text" class="form-control" id="OtrasEspecificaciones" name="OtrasEspecificaciones"  value="{{product.OtrasEspecificaciones}}">
+                </div>
+                <div class="form-group">
+                    <p>
+                        <label for="Imagen">Imagen: <input type="file" class="form-control-file" id="imagen" name="imagen"></label>
+                    </p>
+                    <p>
+                        <label><input type="checkbox" name="img_delete" id="img_delete" value="1"> Eliminar imagen actual?</label>
+                        <input type="hidden" name="img_original" value="{{product.img_id}}">
+                    </p>
+                </div>
+                <div class="form-group my-4">
+                    <button type="submit" class="btn btn-primary">Actualizar Producto</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {{!-- En caso de no haber llenado todos lo camos obligatorios se muestra este mensaje de error --}}
+    {{#if error}}
+        <div class="alert alert-danger" role="alert">
+            {{message}}
+        </div>
+    {{/if}}
+</div>

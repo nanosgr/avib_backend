@@ -1,0 +1,47 @@
+{{!-- Se agrega un div con un enlace para hacer el logout de la aplicación --}}
+<div class="d-flex flex-row my-5 justify-content-end">
+    <a class="btn btn-danger" href="/admin/logout">Cerrar sesión</a>
+</div>
+
+{{!-- Agregamos un botón para insertar registros en la bd llamando a un formulario --}}
+
+<div class="d-flex flex-row mt-5 justify-content-end">
+    <a class="btn btn-success" href="/productos/nuevo">Agregar <span><i class="fas fa-add"></i></span></a>
+</div>
+
+{{!-- En esta plantilla renderizamos la consulta de los productos en la BD --}}
+
+{{#if products}}
+    <h1>Productos</h1>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Medidas</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Imagen</th> 
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>            
+            {{#each products}}
+                <tr>
+                    <td scope="row">{{NombreProducto}}</td>
+                    <td>{{Medidas}}</td>
+                    <td>{{Descripcion}}</td>
+                    <td><img src="{{{producto_img}}}" alt=""></td>
+                    <td>
+                        <a href="/productos/editar/{{id}}" style="text-decoration: none;">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a href="/productos/eliminar/{{id}}" style="color: red; text-decoration: none;">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{else}}
+    <h1>No hay productos</h1>
+{{/if}}

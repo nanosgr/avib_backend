@@ -1,0 +1,43 @@
+{{!-- Renderizamos el formulario que nos permite agregar un producto en la base de datos --}}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center">Agregar Producto</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <form action="/productos/nuevo" method="POST" enctype="multipart/form-data">
+                <div class="form-group my-4">
+                    <label for="NombreProducto">Nombre Producto</label>
+                    <input type="text" class="form-control" id="NombreProducto" name="NombreProducto" required>
+                </div>
+                <div class="form-group my-4">
+                    <label for="Medidas">Medidas</label>
+                    <input type="text" class="form-control" id="Medidas" name="Medidas" required>
+                </div>
+                <div class="form-group my-4">
+                    <label for="Descripcion">Descripción</label>
+                    <input type="text" class="form-control" id="Descripcion" name="Descripcion" required>
+                </div>
+                <div class="form-group my-4">
+                    <label for="OtrasEspecificaciones">Otras Especificaciones</label>
+                    <input type="text" class="form-control" id="OtrasEspecificaciones" name="OtrasEspecificaciones">
+                </div>
+                <div class="form-group">
+                    <label for="Imagen">Imagen: <input type="file" class="form-control-file" id="imagen" name="imagen"></label>
+                </div>
+                <div class="form-group my-4">
+                    <button type="submit" class="btn btn-primary">Agregar Producto</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {{!-- En caso de no haber llenado todos lo camos obligatorios se muestra este mensaje de error --}}
+    {{#if error}}
+        <div class="alert alert-danger" role="alert">
+            {{message}}
+        </div>
+    {{/if}}
+</div>
